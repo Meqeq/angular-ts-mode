@@ -1,0 +1,2 @@
+* Angular tree-sitter mode
+
