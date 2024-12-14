@@ -1,2 +1,27 @@
 * Angular tree-sitter mode
 
+Simple mode for Angular with a Tree-sitter support for Emacs 29. 
+
+This mode requires the [[https://github.com/dlvandenberg/tree-sitter-angular]] grammar to be installed.
+
+It is based on the built-in =html-ts-mode= and [[https://www.masteringemacs.org/article/lets-write-a-treesitter-major-mode][this article]]. 
+
+* Prerequisites
+
+1. Ensure your Emacs was built with the =--with-tree-sitter= option.
+2. Install the Angular grammar by running =M-x treesit-install-language-grammar= and providing the [[https://github.com/dlvandenberg/tree-sitter-angular][Tree-sitter Angular grammar]].
+
+* Installation
+
+Then you can install this package using =straight.el=.
+
+#+begin_src emacs-lisp
+(use-package angular-ts-mode
+  :straight(:host github :repo "Meqeq/angular-ts-mode"))
+#+end_src
+
+Alternatively, copy the package to your =.emacs.d= and import it directly.
+
+#+begin_src emacs-lisp
+(require 'angular-ts-mode "~/.emacs.d/angular-ts-mode.el")
+#+end_src
